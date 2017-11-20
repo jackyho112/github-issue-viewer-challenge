@@ -6,12 +6,10 @@ import './App.css';
 const FourOhFour = () => <h1>404</h1>;
 
 const App = () => (
-  <div className="app">
-    <Switch>
-      <Route exact path="/" component={props => <IssueViewer {...props} />} />
-      <Route component={FourOhFour} />
-    </Switch>
-  </div>
+  <Switch>
+    <Route exact path="/" component={props => <IssueViewer {...props} />} />
+    <Route component={FourOhFour} />
+  </Switch>
 );
 
 export default App;
