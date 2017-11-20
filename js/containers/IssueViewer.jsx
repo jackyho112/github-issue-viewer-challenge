@@ -41,7 +41,7 @@ class IssueViewer extends Component {
   repoLinkIssuesStore = {};
 
   onLinkPaste = event => {
-    this.setState({ currentLink: event.target.value }, this.fetchIssues);
+    this.setState({ currentLink: event.target.value }, this.fetchMoreIssues);
   };
 
   clearLink = (shouldDisplayInvalidLinkMsg = false) => {
@@ -65,7 +65,7 @@ class IssueViewer extends Component {
         currentPageNumber: 0,
         canLoadMore: true,
       },
-      this.fetchIssues,
+      this.fetchMoreIssues,
     );
 
   filterIssues = issues => {
@@ -73,10 +73,10 @@ class IssueViewer extends Component {
     return issues.filter(filterFunc);
   };
 
-  fetchIssues = () => {
+  fetchMoreIssues = () => {
     const { repoLinkIssuesStore, state: { currentLink, loading } } = this;
 
-    if (loading) {
+    if (loading || !currentLink) {
       return;
     }
 
@@ -122,11 +122,11 @@ class IssueViewer extends Component {
       )
       .then(response => {
         repo.isValid = true;
+        repo.pageLoaded += 1;
 
         if (response.data.length === 0) {
           repo.areAllLoaded = true;
         } else {
-          repo.pageLoaded += 1;
           repo.issues = repo.issues.concat(response.data);
         }
 
@@ -190,7 +190,7 @@ class IssueViewer extends Component {
           selectFilter={this.selectFilter}
         />
         <InfiniteScroller
-          loadMore={this.fetchIssues}
+          loadMore={this.fetchMoreIssues}
           loader={<LoaderDiv>Loading...</LoaderDiv>}
           hasMore={canLoadMore}
         >
