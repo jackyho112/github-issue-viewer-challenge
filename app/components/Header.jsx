@@ -46,7 +46,7 @@ const Header = ({
   loading,
   clearLink,
   topHeaderHeight,
-  onLinkPaste,
+  onLinkPaste
 }) => {
   const isFullScreen = !currentLink || currentPageNumber === 0;
 
@@ -63,7 +63,7 @@ const Header = ({
         shouldDisplayInvalidLinkMsg
           ? <MsgP key="msg-p-invalid">Please paste a valid link</MsgP>
           : null,
-        loading ? <MsgP key="msg-p-loading">Loading...</MsgP> : null,
+        loading ? <MsgP key="msg-p-loading">Loading...</MsgP> : null
       ];
     }
 
@@ -74,7 +74,7 @@ const Header = ({
         src={closeIconUrl}
         onClick={() => clearLink()}
         key="clear-link"
-      />,
+      />
     ];
   }
 

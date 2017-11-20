@@ -11,7 +11,7 @@
   "lint-staged": {
     "linters": {
       "*.{js,jsx}": [
-        "prettier --single-quote --trailing-comma all --write",
+        "prettier --single-quote --write",
         "git add"
       ]
     }

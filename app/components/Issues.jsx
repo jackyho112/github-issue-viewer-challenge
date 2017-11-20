@@ -6,7 +6,7 @@ import filters from '../constants/filters';
 
 function getIconUrl(issue) {
   const foundFilterLabel = Object.keys(filters).find(
-    label => filters[label].iconUrl && filters[label].identify(issue),
+    label => filters[label].iconUrl && filters[label].identify(issue)
   );
 
   if (foundFilterLabel) {

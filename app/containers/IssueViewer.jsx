@@ -34,7 +34,7 @@ class IssueViewer extends Component {
     shouldDisplayInvalidLinkMsg: false,
     loading: false,
     canLoadMore: false,
-    currentFilter: defaultFilter,
+    currentFilter: defaultFilter
   };
 
   currentRepo = null;
@@ -53,7 +53,7 @@ class IssueViewer extends Component {
       currentIssues: [],
       currentPageNumber: 0,
       canLoadMore: false,
-      currentFilter: defaultFilter,
+      currentFilter: defaultFilter
     });
   };
 
@@ -63,9 +63,9 @@ class IssueViewer extends Component {
         currentFilter,
         currentIssues: [],
         currentPageNumber: 0,
-        canLoadMore: true,
+        canLoadMore: true
       },
-      this.fetchMoreIssues,
+      this.fetchMoreIssues
     );
 
   filterIssues = issues => {
@@ -95,7 +95,7 @@ class IssueViewer extends Component {
         areAllLoaded: false,
         isValid: true,
         issues: [],
-        path: repoPath,
+        path: repoPath
       };
     } else if (!repoLinkIssuesStore[repoPath].isValid) {
       return this.clearLink(true);
@@ -118,7 +118,7 @@ class IssueViewer extends Component {
 
     return axios
       .get(
-        `https://api.github.com/repos${repo.path}/issues?page=${nextPage}&per_page=${batchSize}&state=all`,
+        `https://api.github.com/repos${repo.path}/issues?page=${nextPage}&per_page=${batchSize}&state=all`
       )
       .then(response => {
         repo.isValid = true;
@@ -147,7 +147,7 @@ class IssueViewer extends Component {
       canLoadMore: !(repo.issues.length === newIssues.length &&
         repo.areAllLoaded),
       currentIssues: newIssuesFiltered,
-      currentPageNumber: nextPage,
+      currentPageNumber: nextPage
     });
   };
 
@@ -156,7 +156,7 @@ class IssueViewer extends Component {
       currentLink,
       shouldDisplayInvalidLinkMsg,
       currentPageNumber,
-      loading,
+      loading
     } = this.state;
 
     return (
@@ -178,7 +178,7 @@ class IssueViewer extends Component {
       currentFilter,
       currentIssues,
       canLoadMore,
-      currentLink,
+      currentLink
     } = this.state;
 
     return [
@@ -196,7 +196,7 @@ class IssueViewer extends Component {
         >
           <Issues issues={currentIssues} />
         </InfiniteScroller>
-      </MainContentDiv>,
+      </MainContentDiv>
     ];
   }
 }
