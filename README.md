@@ -2,9 +2,7 @@
 
 ## Installation
 
-Install `yarn` if you haven't yet
-
-Then,
+Install [yarn](https://yarnpkg.com/en/) if you haven't yet
 
 ```sh
 yarn
