@@ -1,0 +1,28 @@
+/*:global {
+  @import '../../node_modules/react-select/dist/react-select.css';
+}*/
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../_assets/fonts/montserrat-regular.woff2') format('woff2'),
+       url('../_assets/fonts/montserrat-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  src: url('../_assets/fonts/montserrat-bold.woff2') format('woff2'),
+       url('../_assets/fonts/montserrat-bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  src: url('../_assets/fonts/montserrat-light.woff2') format('woff2'),
+       url('../_assets/fonts/montserrat-light.woff') format('woff');
+}
+
+html {
+  font-family: "Montserrat", Times, serif;
+  font-size: 8px;
+}
