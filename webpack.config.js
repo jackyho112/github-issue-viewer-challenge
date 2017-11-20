@@ -26,8 +26,7 @@ const config = {
   },
   stats: {
     colors: true,
-    reasons: true,
-    chunks: true
+    reasons: true
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
