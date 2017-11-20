@@ -8,7 +8,7 @@ Install [yarn](https://yarnpkg.com/en/) if you haven't yet
 yarn
 ```
 
-## Development
+## Development/Testing
 
 ```sh
 yarn dev
