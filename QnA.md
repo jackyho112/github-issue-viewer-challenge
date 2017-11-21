@@ -52,7 +52,7 @@
 - Fixing bugs and debugging various issues: 30 minutes
 - Refactoring and cleaning up: 30 minutes
 
-In total: 5 hours and 40 minutes
+In total: 5 hours and 40 minutes(these are rough estimates)
 
 > If you could go back and give yourself advice at the beginning of the project, what would it be?
 
