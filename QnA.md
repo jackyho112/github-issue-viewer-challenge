@@ -56,21 +56,19 @@ In total: 5 hours and 40 minutes
 
 > If you could go back and give yourself advice at the beginning of the project, what would it be?
 
-- I would tell myself to get more familiar with [styled-components](https://github.com/styled-components/styled-components) before starting on the project because at various points of development, I had to refer back to the documentation to look for standard ways
+- I would tell myself to get more familiar with [styled-components](https://github.com/styled-components/styled-components) before starting on the project because at a few points of the development, my utilization of the library gave me errors and I had to quickly refer back to the documentation for clarification. Due to the time-sensitive nature of the assignment, these obstacles made the process a bit more stressful. In normal circumstances, I would simply do some more research and handle the situations calmly based on the new information.
 
-- infinite list
+- I wish I could identify the hidden limitation of the mockup for the issue box. It was not easy to find an ideal way to display the information of each issue given its high probability to overflow the container. It was quite a predicament when I discovered that `text-overflow: ellipsis` does not work as I expected it to be and I had to do a lot more research on the various CSS properties that could potentially be used to reach the proper display. As I was spending too much time trying to achieve the mockup with little success, I decided to compromise and end up with a more rigid design.
 
-- styling box
+- I should have used [babel-plugin-inline-react-svg](https://github.com/kesne/babel-plugin-inline-react-svg) to handle using the icons instead of loading them through [file-loader](https://github.com/webpack-contrib/file-loader) because by using the latter, I had to modify the original icon files and that was definitely not a flexible way to code the icons. The babel plugin would allow me to idiomatically style the icons as React components and the SVG files to maintain its original integrity.
 
-- one page
-
-- svg component
+- Despite my previous experience, the extra features I decided to include in the MVP version were not exactly implemented without any hurdle and I wish I could have thought more deeply about their implementation. Namely, when my original plan for implementing the infinite list produced code that was as easy to reason about as I would like it to be. Furthermore, my decision to reuse the header component as the initial page added more logic to the component than I expected at first. These issues were eventually resolved through refactoring, but more careful planning could have ameliorated the difficulties.
 
 > Did you learn anything new?
 
-- text
+- I learned more about the usage of the css property, `text-overflow` and its limitation. For instance, I now know that it has to be used together with `overflow` and `white-space`. Furthermore, in the future, I can more easily identify situations where text overflowing could be a problem from mockups and come up with plans beforehand.
 
-- styled components
+- I have gotten more familiar with `styled-components`. More specifically, I have gained more experience integrating the library with a React component's props and organizing a React library with this method of styling. Furthermore, I have acquired more insights in terms of the props and cons of using `styled-components`. For instance, it is convenient and explicit for a component's styles to be in the same file as its content, but it may be hard to come up with ways to reuse styles.
 
 > Do you feel that this assignment allowed you to showcase your abilities effectively?
 
