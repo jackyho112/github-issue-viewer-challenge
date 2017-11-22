@@ -31,7 +31,7 @@
 
 > Describe the major design/build decisions and why you made them.
 
-- Although the mockups technically have two pages, I made a single-page application because it is a smoother user experience. Furthermore, the header and the landing page have a lot of common attributes such as the background color and the app title; hence, I believe it is worth making the header support full-screen display despite the added complexities. This decision also has the added benefits of saving time and keeping the code base small which are relevant to this kind of take-home assignments.
+- Although the mockups technically have two pages, I made a single-page application because it is a smoother user experience. Furthermore, the header and the landing page have a lot of common attributes such as the background color and the application title; hence, I believe it is worth making the header support full-screen display despite the added complexities. This decision also has the added benefits of saving time and keeping the code base small which are most relevant to this kind of take-home assignments.
 
 - I decided to implement an infinite list in the MVP version because I had experience building infinite list containers and the application otherwise has the risk of loading an extremely long list all at once which can be unsafe for some users. Furthermore, because of my past experience, an infinite list infrastructure is natural and intuitive to my development or thought process despite the additional implementation time.
 
@@ -70,10 +70,44 @@ In total: 5 hours and 40 minutes(these are rough estimates)
 
 - I have gotten more familiar with `styled-components`. More specifically, I have gained more experience integrating the library with a React component's props and organizing a React library with this method of styling. Furthermore, I have acquired more insights in terms of the props and cons of using `styled-components`. For instance, it is convenient and explicit for a component's styles to be in the same file as its content, but it may be hard to come up with ways to reuse styles.
 
+**Please be aware that the comments below are purely my opinions and may not be entirely true**
 > Do you feel that this assignment allowed you to showcase your abilities effectively?
 
--
+- Unfortunately, regardless of the evaluation, this assignment does not accurately reflect my coding abilities in a team or company setting which is the work context in Axiom Zen or pretty much every single developer shop I have ever worked in. I do know that this kind of take-home assignments is ubiquitous in tech companies, but I believe its effectiveness to showcase how a candidate will work in the company is lacking. Please let me elaborate further.
+
+- Throughout my coding career in terms of both work and hobby, I have never worked on a project that has such criterions in such an unrealistic context. Namely, I was given the impression that this project would be heavily evaluated based the amount of time I spent completing it because I was given a timeframe of four hours and told that 'done is better than perfect'. On the other hand, Axiom Zen aims to discern my usage of best practices, development process, design decisions and structuring skills. These two are extremely conflicting requirements. For instance, I make completely different technical decisions based on a project's goal and metrics of success. In order to strongly prioritize speed, I had to make calls that I rarely make in a company setting and many of them are not acceptable development practices in a team environment.
+
+- There are many examples of poor development practices in the context of a company that I had to make in this project to fulfill the requirements. For instance, I would never code so much without writing a single test, skip type checking in my React components, skip fixing lint errors and push so many features without asking for feedback. These are all essential practices for a large code base or an application that is expected to grow in the foreseeable future. However, they are not discernibly as appropriate or essential for a take-home assignment that is time-sensitive at the hourly level, requires a wide range of features and has huge evaluative consequences.
+
+- In terms of tools, I had to make most choices for the sake of speed and my initial comfortability, whilst in a company setting, I would pick tools that make the most sense for the feature requirements, enhance the maintainability of the code base, have low complexities and are performant. Furthermore, normally, I will do much more research on my personal time to learn about various relevant tools and popular approaches when I am given certain tasks that my experience does not completely relate to, while for this assignment, learning is also counted toward the time. For instance, I picked `styled-components` to style my components mainly for convenience, while under normal circumstances, I would be much more considerate and think about how it will affect the codebase in the long run. Another example is my decision not to use a state management library with the purpose of saving time and risk minimization. For a growing React codebase, I would almost always implement a state management tool such as [Redux](https://github.com/reactjs/redux) and [MobX](https://github.com/mobxjs/mobx), both of which I have experience in. Integration with any of these tools would drastically change and most likely improve a React code base's structure and expressiveness.
+
+- Last but not least, this project was done in a rather solitary context which does not remotely match how software development should be conducted in the real world. In a normal company setting, I will divide the tasks of an update into minimally viable chunks and then work progressively towards completing the updates by pushing out one chunk on each step and getting feedback on it. In terms of my coding style and technical decisions, I would also take into account the existing code base's or the company's other code bases' conventions, my coworkers' experiences and preferences, the organization's culture, the business goals and the purpose of each update from the user's point of view. These are all extremely important considerations when I am coding in a company setting and will significantly influence how I code to make the most optimal decisions for the company. Unfortunately, these factors barely exist or are mostly irrelevant for this assignment as far as its specifications go.
+
+- In conclusion, I code differently based on the context to achieve maximum effectiveness regarding the purpose and try to incorporate collaboration appropriately into my development process. This assignment portrays a context completely different from the development context that is in a company setting and therefore does not accurately how I would work as an Axiom Zen engineer, regardless of the result of the evaluation.
 
 > Are there any significant web development-related skills that you possess that were not demonstrated in this exercise? If so, what are they?
 
--
+This exercise does not demonstrate most of my strengths. Here are the examples:
+
+- Evaluating a feature perceptively and dividing it into multiple viable updates to be pushed to production for frequent evaluation and feedback
+
+- Collaborating effectively with designers and businesspeople on arriving at a design that takes into account the perspectives of all stakeholders while maintaining the health of the code base
+
+- Understanding the business, aesthetic and user experience aspects of each feature based on scientific knowledge and being able to provide valuable inputs at driving a feature's direction towards providing users the most values
+
+- Adapting optimally to different projects' conventions and contributing idiomatically to different code bases
+
+- Quickly absorbing feedback and discerning preferences from teammates with the goal of crafting a coding style that is in harmony with the team
+
+- Wisely taking advantage of teammates' strengths by collaborating with them on different tasks and learning from their experience
+
+- Keeping up-to-date with the latest technologies, best practices and discussions among the most talented engineers by being active in the open source community and constantly learning new knowledge
+
+Some of these skills can be evaluated in my recent PRs to open source projects.
+1. [A PR for material-ui](https://github.com/mui-org/material-ui/pull/9004)
+2. [A PR for prettier](https://github.com/prettier/prettier/pull/2763)
+3. [A PR for eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react/pull/1458)
+
+### Extra comments:
+
+I am so sorry that I had to be blunt and critical in my postmortem; if I still have your attention, let me know give you a bit more context about my comments. Three months ago, I did a bunch of similar assignments and they landed me a few offers. I eventually picked the one given by [thisopenspace](https://thisopenspace.com) and have been working there since. What I have noticed is the mentality and considerations I had coding the assignments are not remotely similar to the ones I have when working for thisopenspace mostly because the environments and contexts are totally different for the two activities. In other words, from the code assignment, thisopenspace would see me as a coder absolutely different than how I would be coding for them. Although my current company happened to find both identities desirable, this does not excuse an ineffectual process to be relied upon this heavily for evaluation. I hope you can understand my point of view given my personal experience.
