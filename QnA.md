@@ -101,6 +101,8 @@ This exercise does not demonstrate most of my strengths. Here are the examples:
 
 - Wisely taking advantage of teammates' strengths by collaborating with them on different tasks and learning from their experience
 
+- Accessing the health of a code base, sensibly refactoring existing modules and astutely advancing the quality of existing code
+
 - Keeping up-to-date with the latest technologies, best practices and discussions among the most talented engineers by being active in the open source community and constantly learning new knowledge
 
 Some of these skills can be evaluated in my recent PRs to open source projects.
